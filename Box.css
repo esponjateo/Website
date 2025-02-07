@@ -12,6 +12,18 @@
     
 }
 
+.box2
+{
+    border: 5px solid yellowgreen;
+    background-color: black;
+    height: 50%;
+    width: 35%;
+    text-align: center;
+    margin-left: 450px;
+    line-height: 5;
+    padding: 1%;
+}
+
 .space
 {
     white-space: pre-line;
