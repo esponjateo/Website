@@ -4,25 +4,56 @@
     border: 5px solid yellowgreen;
     background-color: black;
     height: 50%;
-    width: 35%;
+    width: 33%;
     text-align: center;
-    margin-left: 450px;
+    margin-left: 470px;
     line-height: 5;
     padding: 1%;
+    margin-top: 1%;
     
 }
 
 .box2
 {
     border: 5px solid yellowgreen;
+    border-bottom: 3px solid yellowgreen;
     background-color: black;
-    height: 50%;
-    width: 35%;
+    height: 40px;
+    width: 90%;
     text-align: center;
-    margin-left: 450px;
-    line-height: 5;
+    line-height: 2;
+    padding: 1%;
+    
+}
+
+.box3
+{
+    border: 5px solid yellowgreen;
+    border-top: 2px solid yellowgreen;
+    background-color: black;
+    height: 40px;
+    width: 90%;
+    text-align: center;
+    line-height: 2;
     padding: 1%;
 }
+
+
+.boxback
+{
+    
+    background-color: #080707;
+    height: 500px;
+    width: 11%;
+    text-align: center;
+    line-height: 2;
+    padding: 1%;
+    float: right;
+    margin-right: 475px;
+    margin-top: 1%;
+    
+}
+
 
 .space
 {
