@@ -1,6 +1,12 @@
+.page{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
 .box1
 {
-    
+    align-items: center;
     border: 5px solid yellowgreen;
     background-color: black;
     height: 50%;
@@ -11,6 +17,13 @@
     padding: 1%;
     margin-top: 1%;
     
+}
+
+.Intro{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .box2
@@ -41,9 +54,9 @@
 
 .boxback
 {
-    
+    margin-left:2%;
     background-color: #080707;
-    height: 100 px;
+    height: fit-content;
     width: 11%;
     text-align: center;
     line-height: 2;
@@ -54,9 +67,47 @@
     
 }
 
+.ralsei{
+    display:flex;
+    flex-direction: row;
+    padding-bottom: 3%;
+}
+
+.text{
+    padding-left:5%;
+}
 
 .space
 {
     white-space: pre-line;
     white-space: nowrap;
+}
+
+@media(max-width:1080px){
+    .box1{
+        padding-right:5%;
+    }
+
+    .ralsei_pfp{
+        width:50%;
+        height:50%;
+    }
+
+    .text{
+        width:90%;
+        height:40%;
+    }
+
+    .box1{
+        width:50%;
+    }
+
+    .workPFP{
+        width:150px;
+        height:150px;
+    }
+
+    .ralsei{
+        flex-direction:column;
+    }
 }
