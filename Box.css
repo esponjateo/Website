@@ -19,6 +19,10 @@
     
 }
 
+.deltarune{
+    display: block; margin-left: auto; margin-right: auto; width: 50%;
+}
+
 .Intro{
     display:flex;
     flex-direction: column;
@@ -84,6 +88,10 @@
 }
 
 @media(max-width:1080px){
+    .deltarune{
+        width:42.5%;
+    }
+
     .box1{
         padding-right:5%;
     }
