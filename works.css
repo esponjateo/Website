@@ -69,6 +69,12 @@
     white-space: nowrap;
 }
 
+
+.barrier{
+    border: 1px solid #9acd32;
+    margin-bottom:2%;
+}
+
 @media(max-width:1080px){
     .Intro h1{
         font-size:24px;
