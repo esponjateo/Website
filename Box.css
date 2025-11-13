@@ -75,6 +75,7 @@
     display:flex;
     flex-direction: row;
     padding-bottom: 3%;
+    margin-right: 10%;
 }
 
 .text{
@@ -87,7 +88,7 @@
     white-space: nowrap;
 }
 
-@media(max-width:1080px){
+@media(max-width:1540px){
     .deltarune{
         width:42.5%;
     }
