@@ -55,6 +55,17 @@
     padding: 1%;
 }
 
+.box4
+{
+    border: 5px solid yellowgreen;
+    border-top: 2px solid yellowgreen;
+    background-color: black;
+    height: 40px;
+    width: 90%;
+    text-align: center;
+    line-height: 2;
+    padding: 1%;
+}
 
 .boxback
 {
@@ -95,6 +106,10 @@
 
     .box1{
         padding-right:5%;
+    }
+
+    .box4{
+        height: 80px;
     }
 
     .ralsei_pfp{
