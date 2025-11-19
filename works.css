@@ -1,7 +1,26 @@
+@font-face {
+  font-family: "DeterminationMono";
+  src: 
+       url("determination.ttf") format("woff");
+}
+
+.Header{
+    font-family: "DeterminationMono", sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    font-style: normal;
+
+}
 .page{
     display:flex;
     flex-direction: row-reverse;
     justify-content: center;
+}
+
+#other_projs{
+    font-size:1em;
+    margin:5%;
 }
 
 .box1
@@ -35,7 +54,7 @@
     text-align: center;
     line-height: 2;
     padding: 1%;
-    
+    padding-right:9%;
 }
 
 .box3
@@ -48,6 +67,7 @@
     text-align: center;
     line-height: 2;
     padding: 1%;
+    padding-right:9%;
 }
 
 .box4
@@ -63,6 +83,7 @@
     text-align: center;
     line-height: 2;
     padding: 1%;
+    padding-right:9%;
 }
 
 .boxback
@@ -74,6 +95,7 @@
     line-height: 2;
     padding: 1%;
     float: right;
+    padding-right:1.3%;
     margin-right: 475px;
     margin-top: 1%;
     
