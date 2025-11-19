@@ -9,8 +9,6 @@
     align-items: center;
     border: 5px solid yellowgreen;
     background-color: black;
-    height: 50%;
-    width: 33%;
     text-align: center;
     margin-left: 470px;
     line-height: 5;
@@ -20,7 +18,7 @@
 }
 
 .deltarune{
-    display: block; margin-left: auto; margin-right: auto; width: 50%;
+    display: block; margin-left: auto; margin-right: auto; width: 35%;
 }
 
 .Intro{
@@ -62,6 +60,9 @@
     background-color: black;
     height: 40px;
     width: 90%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     text-align: center;
     line-height: 2;
     padding: 1%;
@@ -72,7 +73,6 @@
     margin-left:2%;
     background-color: #080707;
     height: fit-content;
-    width: 11%;
     text-align: center;
     line-height: 2;
     padding: 1%;
@@ -100,45 +100,49 @@
 }
 
 @media(max-width:1740px){
+
     .deltarune{
-        width:40.5%;
+        width:70vw;
     }
 
     .box1{
         padding-right:10%;
     }
 
-    .box2{
-        padding-right: 25%;
-    }
 
-    
-    .box3{
-        padding-right: 25%;
-    }
 
-    .box4{
-        height: 80px;
-        padding-right: 25%;
+    .Intro{
+        width:40vw;
     }
 
     .ralsei_pfp{
-        width:30%;
-        height:30%;
+        width:60%;
+        height:60%;
     }
 
     .text{
         width:100%;
-        height:40%;
-    }
-
-    .box1{
-        width:50%;
+        height:60%;
     }
 
     .workPFP{
-        width:150px;
-        height:180px;
+        width: 50%;
+        height: 41.655%;
     }
 
+}
+
+@media(max-width:680px){
+    .Intro{
+        width:45vw;
+    }
+
+    .text{
+        width:90%;
+    }
+
+    .ralsei_pfp{
+        width:40%;
+        height:40%;
+    }
 }
