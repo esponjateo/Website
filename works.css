@@ -166,7 +166,22 @@
 @media(max-width:680px){
     .box1{
         padding-right:1%;
-        margin-left: 100%;
+        margin-left: 80%;
         min-width: 50%;
+    }
+}
+
+@media(max-width:590px){
+  
+    .box1{
+        margin-left: 95%;  
+    }
+}
+
+
+@media(max-width:520px){
+  
+    .box1{
+        margin-left: 123%;  
     }
 }
