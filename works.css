@@ -30,7 +30,7 @@
     background-color: black;
     width: 33%;
     text-align: center;
-    margin-left: 470px;
+    margin-left: 20%;
     padding: 1%;    
     height: 50%;
     align-items: center;
@@ -133,6 +133,8 @@
 
     .box1{
         padding-right:1%;
+        margin-left: 40%;
+        min-width: 600px;        
     }
 
     .text{
@@ -150,4 +152,21 @@
     }
 
 
+}
+
+
+@media(max-width:900px){
+    .box1{
+        padding-right:1%;
+        margin-left: 90%;
+        min-width: 50%;
+    }
+}
+
+@media(max-width:680px){
+    .box1{
+        padding-right:1%;
+        margin-left: 100%;
+        min-width: 50%;
+    }
 }

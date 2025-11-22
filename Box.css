@@ -155,9 +155,9 @@
 
 }
 
-@media(max-width:680px){
+@media(max-width:1080px){
     .Intro{
-        width:45vw;
+        width:44vw;
     }
 
     .text{
@@ -167,5 +167,49 @@
     .ralsei_pfp{
         width:40%;
         height:40%;
+    }
+
+    .box1{
+        margin-left: 60%;
+    }
+}
+
+@media(max-width:680px){
+    .Intro{
+        width:40vw;
+        margin-left: -5%;
+    }
+
+    .text{
+        width:90%;
+    }
+
+    .ralsei_pfp{
+        width:40%;
+        height:40%;
+    }
+
+    .box1{
+        margin-left: 85%;
+    }
+}
+
+@media(max-width:520px){
+    .Intro{
+        width:40vw;
+        margin-left: -5%;
+    }
+
+    .text{
+        width:90%;
+    }
+
+    .ralsei_pfp{
+        width:40%;
+        height:40%;
+    }
+
+    .box1{
+        margin-left: 102%;
     }
 }
