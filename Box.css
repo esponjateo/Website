@@ -18,11 +18,21 @@ html {
 }
 
 /* Deltarune Soul Cursor */
-html, body {
+html,
+body {
     cursor: url("Images/soul_cursor.png") 16 16, auto;
 }
 
-a, button, [role="button"], input, select, textarea, .deltarune, .boxback a, .project-link, .brand {
+a,
+button,
+[role="button"],
+input,
+select,
+textarea,
+.deltarune,
+.boxback a,
+.project-link,
+.brand {
     cursor: url("Images/soul_cursor.png") 16 16, pointer;
 }
 
@@ -412,6 +422,7 @@ header h1.Header {
 
 /* Responsive Design */
 @media (max-width: 850px) {
+
     header,
     .site-header {
         flex-direction: column;
