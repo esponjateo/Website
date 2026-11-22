@@ -179,7 +179,7 @@ header h1.Header {
 .deltarune {
     display: block;
     margin: 0 auto;
-    width: 35%;
+    width: 100%;
     min-width: 260px;
     max-width: 450px;
     height: auto;

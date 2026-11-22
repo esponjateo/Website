@@ -131,8 +131,8 @@ header,
 /* Mateo Adora Brand in Header */
 .brand {
     position: absolute;
-    left: 16px;
-    top: 50%;
+    left: 1px;
+    top: 10%;
     transform: translateY(-50%);
     display: inline-flex;
     align-items: center;
@@ -179,7 +179,7 @@ header h1.Header {
 .deltarune {
     display: block;
     margin: 0 auto;
-    width: 35%;
+    width: 100%;
     min-width: 260px;
     max-width: 450px;
     height: auto;
