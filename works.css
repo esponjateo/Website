@@ -5,30 +5,157 @@
     font-style: normal;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    background-color: #000000;
+}
+
+/* Deltarune Soul Cursor */
+html,
 body {
-    background-image: url("Images/Background.jpeg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: #050505;
+    cursor: url("Images/soul_cursor.png") 16 16, auto;
+}
+
+a,
+button,
+[role="button"],
+input,
+select,
+textarea,
+.deltarune,
+.boxback a,
+.project-link,
+.brand {
+    cursor: url("Images/soul_cursor.png") 16 16, pointer;
+}
+
+body {
+    background: transparent;
     font-family: "DeterminationMono", 'Lucida Sans', Geneva, Verdana, sans-serif;
     color: #ffffff;
     min-height: 100vh;
     padding: 24px 16px 48px;
+    position: relative;
+}
+
+/* Deltarune Dark World Looping Battle Grid */
+.deltarune-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0.85;
+}
+
+/* Dual overlapping grid layers (72px boxes matching reference image) */
+.deltarune-bg::before,
+.deltarune-bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 72px 72px;
+}
+
+/* Layer 1 (Shadow grid layer - deep muted purple shadow) */
+.deltarune-bg::before {
+    background-image:
+        linear-gradient(to right, rgba(65, 15, 68, 0.55) 2px, transparent 2px),
+        linear-gradient(to bottom, rgba(65, 15, 68, 0.55) 2px, transparent 2px);
+    animation: battleGridTwo 14s linear infinite;
+}
+
+/* Layer 2 (Primary foreground layer - softened neon magenta to prevent eye strain) */
+.deltarune-bg::after {
+    background-image:
+        linear-gradient(to right, rgba(185, 35, 185, 0.50) 2px, transparent 2px),
+        linear-gradient(to bottom, rgba(185, 35, 185, 0.50) 2px, transparent 2px);
+    animation: battleGridOne 9s linear infinite;
+}
+
+@keyframes battleGridOne {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 72px 72px;
+    }
+}
+
+@keyframes battleGridTwo {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -72px -72px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .deltarune-bg::before,
+    .deltarune-bg::after {
+        animation: none;
+    }
 }
 
 /* Header */
-header, .site-header {
+header,
+.site-header {
+    position: relative;
     text-align: center;
     margin-bottom: 24px;
     width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mateo Adora Brand in Header */
+.brand {
+    position: absolute;
+    left: 1px;
+    top: 10%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    z-index: 5;
+}
+
+.brand-icon {
+    width: 32px;
+    height: auto;
+    object-fit: contain;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 0 6px rgba(173, 255, 47, 0.5));
+}
+
+.brand-name {
+    font-family: "DeterminationMono", monospace, sans-serif;
+    font-size: clamp(20px, 2.5vw, 26px);
+    color: greenyellow;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #000000, 0 0 10px rgba(173, 255, 47, 0.4);
+    white-space: nowrap;
 }
 
 .Header {
@@ -39,7 +166,8 @@ header, .site-header {
     text-align: center;
 }
 
-.portfolio-title, header h1.Header {
+.portfolio-title,
+header h1.Header {
     font-size: clamp(32px, 5vw, 52px);
     color: greenyellow;
     text-align: center;
@@ -56,13 +184,11 @@ header, .site-header {
     max-width: 450px;
     height: auto;
     image-rendering: pixelated;
+    mix-blend-mode: screen;
     transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-.deltarune:hover {
-    transform: scale(1.03);
-    filter: drop-shadow(0 0 8px rgba(173, 255, 47, 0.6));
-}
+
 
 /* Page Layout */
 .page {
@@ -71,7 +197,7 @@ header, .site-header {
     justify-content: center;
     align-items: flex-start;
     gap: 28px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
 }
@@ -83,9 +209,14 @@ header, .site-header {
     background-color: #080707;
     display: flex;
     flex-direction: column;
+    position: sticky;
+    top: 24px;
+    z-index: 10;
 }
 
-.box2, .box3, .box4 {
+.box2,
+.box3,
+.box4 {
     border: 4px solid yellowgreen;
     background-color: #000000;
     min-height: 48px;
@@ -103,7 +234,9 @@ header, .site-header {
     margin-top: 0;
 }
 
-.box2:hover, .box3:hover, .box4:hover {
+.box2:hover,
+.box3:hover,
+.box4:hover {
     background-color: #162406;
     border-color: #bfff00;
 }
@@ -142,13 +275,13 @@ header, .site-header {
 /* Main Content Box */
 .box1 {
     flex: 1;
-    max-width: 760px;
+    max-width: 860px;
     min-width: 0;
     border: 5px solid yellowgreen;
     background-color: #000000;
-    padding: 28px 24px;
+    padding: 32px 28px;
     text-align: center;
-    box-shadow: 0 0 20px rgba(154, 205, 50, 0.2);
+    box-shadow: 0 0 24px rgba(154, 205, 50, 0.25);
 }
 
 /* Home Intro / Ralsei Dialogue */
@@ -271,7 +404,8 @@ header, .site-header {
     position: relative;
     width: 100%;
     max-width: 640px;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
     height: 0;
     margin: 20px auto;
     border: 4px solid yellowgreen;
@@ -290,6 +424,20 @@ header, .site-header {
 
 /* Responsive Design */
 @media (max-width: 850px) {
+
+    header,
+    .site-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .brand {
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin-bottom: 6px;
+    }
+
     .page {
         flex-direction: column;
         align-items: center;
@@ -301,9 +449,13 @@ header, .site-header {
         max-width: 520px;
         flex-direction: row;
         flex-wrap: wrap;
+        position: static;
+        top: auto;
     }
 
-    .box2, .box3, .box4 {
+    .box2,
+    .box3,
+    .box4 {
         flex: 1 1 45%;
         margin-top: 0;
         min-height: 44px;
@@ -324,7 +476,8 @@ header, .site-header {
         padding: 16px 8px;
     }
 
-    .portfolio-title, header h1.Header {
+    .portfolio-title,
+    header h1.Header {
         font-size: 32px;
     }
 
@@ -337,7 +490,9 @@ header, .site-header {
         max-width: 100%;
     }
 
-    .box2, .box3, .box4 {
+    .box2,
+    .box3,
+    .box4 {
         flex: 1 1 100%;
         margin-top: -4px;
     }
