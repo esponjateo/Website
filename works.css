@@ -384,6 +384,13 @@ header h1.Header {
     margin-top: 10px;
 }
 
+.tag-image-left {
+    max-width: 320px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    float: left;
+}
+
 .reflection-doc {
     margin-bottom: 16px;
 }
@@ -418,6 +425,89 @@ header h1.Header {
     height: 100%;
     border: none;
 }
+
+
+
+
+.small-dialogue-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 140px;
+    padding: 6px 18px;
+    margin: 0 auto 14px 0; /* Aligns with the left side of the dialogue box */
+
+    border-style: solid;
+    border-width: 25px;
+    border-color: transparent;
+
+    border-image-source: url("Images/Dialogue_box.png");
+    border-image-slice: 25 fill;
+    border-image-width: 25px;
+    border-image-repeat: stretch;
+
+    box-sizing: border-box;
+    image-rendering: pixelated;
+}
+
+.dialogue-box {
+    width: 100%;
+    min-height: 140px;
+
+    border-style: solid;
+    border-width: 25px;
+    border-color: transparent;
+
+    border-image-source: url("Images/Dialogue_box.png");
+    border-image-slice: 25 fill;
+    border-image-width: 25px;
+    border-image-repeat: stretch;
+
+    box-sizing: border-box;
+    image-rendering: pixelated;
+
+    padding: 12px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.dialogue-portrait {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    image-rendering: pixelated;
+    object-fit: contain;
+}
+
+.dialogue-content {
+    flex: 1;
+    min-width: 0;
+    font-family: "DeterminationMono", monospace, sans-serif;
+    font-size: clamp(20px, 2.5vw, 26px);
+    color: greenyellow;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-shadow: 2px 2px 0 #000000, 0 0 10px rgba(173, 255, 47, 0.4);
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.dialogue-content h3,
+.small-dialogue-box h3 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: normal;
+    letter-spacing: inherit;
+    line-height: 1.2;
+}
+
+
+
 
 /* Responsive Design */
 @media (max-width: 850px) {
@@ -513,5 +603,15 @@ header h1.Header {
 
     .workPFP {
         width: 90%;
+    }
+
+    .dialogue-box {
+        padding: 8px 10px;
+        gap: 12px;
+    }
+
+    .dialogue-portrait {
+        width: 60px;
+        height: 60px;
     }
 }
