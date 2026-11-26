@@ -429,50 +429,53 @@ header h1.Header {
 
 
 
-.small-dialogue-box {
+/* 9-Sliced Game Dialogue Boxes */
+.dialogue-section {
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    min-width: 140px;
-    padding: 6px 18px;
-    margin: 0 auto 14px 0; /* Aligns with the left side of the dialogue box */
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
 
+.dialogue-section:last-child {
+    margin-bottom: 0;
+}
+
+.small-dialogue-box,
+.dialogue-box {
     border-style: solid;
-    border-width: 25px;
+    border-width: 24px;
     border-color: transparent;
 
     border-image-source: url("Images/Dialogue_box.png");
-    border-image-slice: 25 fill;
-    border-image-width: 25px;
+    border-image-slice: 24 fill;
+    border-image-width: 24px;
     border-image-repeat: stretch;
 
     box-sizing: border-box;
     image-rendering: pixelated;
 }
 
+.small-dialogue-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    min-width: 120px;
+    padding: 0 10px;
+    margin: 0 0 4px 0;
+}
+
 .dialogue-box {
     width: 100%;
-    min-height: 140px;
-
-    border-style: solid;
-    border-width: 25px;
-    border-color: transparent;
-
-    border-image-source: url("Images/Dialogue_box.png");
-    border-image-slice: 25 fill;
-    border-image-width: 25px;
-    border-image-repeat: stretch;
-
-    box-sizing: border-box;
-    image-rendering: pixelated;
-
-    padding: 12px 18px;
+    min-height: 160px;
+    padding: 8px 14px;
     display: flex;
     align-items: flex-start;
     gap: 16px;
     text-align: left;
-    margin-bottom: 24px;
 }
 
 .dialogue-portrait {
@@ -492,18 +495,28 @@ header h1.Header {
     letter-spacing: 2px;
     line-height: 1.5;
     text-shadow: 2px 2px 0 #000000, 0 0 10px rgba(173, 255, 47, 0.4);
-    white-space: pre-wrap;
-    word-break: break-word;
+    white-space: normal;
     overflow-wrap: break-word;
+}
+
+.dialogue-content p {
+    margin: 0 0 10px;
+}
+
+.dialogue-content p:last-child {
+    margin-bottom: 0;
 }
 
 .dialogue-content h3,
 .small-dialogue-box h3 {
     margin: 0;
-    font-size: inherit;
+    font-family: "DeterminationMono", monospace, sans-serif;
+    font-size: clamp(18px, 2.2vw, 24px);
     font-weight: normal;
-    letter-spacing: inherit;
+    color: greenyellow;
+    letter-spacing: 2px;
     line-height: 1.2;
+    text-shadow: 2px 2px 0 #000000, 0 0 10px rgba(173, 255, 47, 0.4);
 }
 
 
@@ -605,9 +618,14 @@ header h1.Header {
         width: 90%;
     }
 
+    .small-dialogue-box {
+        padding: 0 8px;
+    }
+
     .dialogue-box {
-        padding: 8px 10px;
+        padding: 6px 10px;
         gap: 12px;
+        min-height: 120px;
     }
 
     .dialogue-portrait {
